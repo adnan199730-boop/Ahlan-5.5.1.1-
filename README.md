@@ -28,3 +28,23 @@ fi
 
 # ==========================
 # إضافة الرابط إل
+# ==========================
+# إضافة الرابط إلى README.md
+# ==========================
+echo "" >> README.md
+echo "## رابط تحميل جديد" >> README.md
+echo "- **التاريخ:** $current_time" >> README.md
+echo "- [Download File](${download_link})" >> README.md
+echo "" >> README.md
+
+# ==========================
+# تنفيذ أوامر Git
+# ==========================
+git add README.md
+git commit -m "$commit_message"
+git push origin main
+
+# ==========================
+# تأكيد العملية
+# ==========================
+echo "✅ تم إضافة رابط التحميل بتاريخ $current_time ورفع التغييرات إلى GitHub بنجاح!"
